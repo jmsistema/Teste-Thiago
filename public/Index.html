@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Coolify Test</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+
+    .card {
+      width: min(90%, 500px);
+      padding: 40px;
+      border-radius: 16px;
+      background: #1e293b;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .status {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #166534;
+      color: #dcfce7;
+      font-weight: bold;
+    }
+
+    .info {
+      margin-top: 25px;
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    #time {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>🚀 Coolify funcionando!</h1>
+
+    <div class="status">
+      Deploy OK
+    </div>
+
+    <p>
+      Esta página está sendo servida como um site estático.
+    </p>
+
+    <div class="info">
+      <div>Ambiente: GitHub + Coolify</div>
+      <div>Diretório: <strong>/public</strong></div>
+      <div>Horário do navegador: <span id="time"></span></div>
+    </div>
+  </main>
+
+  <script>
+    function updateTime() {
+      document.getElementById("time").textContent =
+        new Date().toLocaleString("pt-BR");
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
